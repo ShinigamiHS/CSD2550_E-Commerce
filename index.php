@@ -36,24 +36,10 @@
     <span class="mainProdInfo_2">
       <h3><b>QLED Ultra HD Premium HDR</b></h3>
       <h4><b>88'' Display</b></h4>
-      <a href="samsung.php" class="samsShopbutton"><span>Shop now </span></a>
-    </span>
-</div>
-
-<div class="mainProdDiv_1">
-    <span class="mainProdLogo_1">
-        <img src="images\OmenLogo.png"  />
-    </span>
-    <span class="mainProdPic_1">
-        <img src="images\OmenScreenMain.png" />
-    </span>
-    <span class="mainProdInfo_1">
-        <h2>Ultra Quad High Definition</h2>
-        <h2>3440x1440 @ 100Hz</h2>
-        <a href="hp.php" class="omenShopbutton"><span>Shop now </span></a>
+      <a href="prodList.php" class="samsShopbutton"><span>Shop now </span></a>
     </span>
 </div>
 
 <?php
-  //this function outputs the 2 closing tags in the HTML language
+  //this function outputs the 2 closing tags in HTML
 outputEndHTML();

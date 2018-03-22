@@ -30,9 +30,9 @@ function outputNavBar() {
   //this function creates a list using an array containing all the information, (name, href, images) and loops through all of them to create the navigation bar
     echo '<ul>';
 
-    $pageName = array("MoniShop", "Samsung", "LG", "Asus", "HP");
-    $pageRef = array("index.php", "samsung.php", "lg.php", "asus.php", "hp.php");
-    $pageLogo = array("images\WebsiteLogo.png", "images\SamsungLogo.png", "images\LGLogo.png", "images\AsusLogo.png", "images\HPLogo.png");
+    $pageName = array("MoniShop");
+    $pageRef = array("index.php");
+    $pageLogo = array("images\WebsiteLogo.png");
     for ($i = 0; $i < count($pageName); $i++) {
         echo '<li><a class="' . $pageName[$i] . '" href="' . $pageRef[$i] . '">';
         echo '<img style="width: auto; height: auto;" src="' . $pageLogo[$i] . '" alt="' . $pageName[$i] . '">';

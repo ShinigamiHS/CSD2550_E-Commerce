@@ -1,3 +1,4 @@
+
 <?php
   /*outputNavBar and outputHeader is used on all the main shop pages to make sure not alot of HTML code is re-used
     */

@@ -5,17 +5,17 @@
     outputMain();
 ?>
 <!-- input boxes where you can create a new product -->
-<form class="cmsAddForm">
+<form action="cmsAddFunction.php" method="post" class="cmsAddForm">
   Brand:<br />
-  <input type="text" name="productBrand" placeholder="Samsung"><br />
+  <input type="text" name="brand" placeholder="Samsung"><br />
   Model:<br />
-  <input type="text" name="productBrand" placeholder="QE75Q8CAMTXXU"><br />
+  <input type="text" name="model" placeholder="QE75Q8CAMTXXU"><br />
   Screen size:<br />
-  <input type="text" name="productBrand" placeholder="75"><br />
+  <input type="text" name="screenSize" placeholder="75"><br />
   Description:<br />
-  <input type="text" name="productBrand" placeholder="Curved QLED Ultra HD Premium HDR Smart 4K"><br />
+  <input type="text" name="tags" placeholder="Curved QLED Ultra HD Premium HDR Smart 4K"><br />
   Price:<br />
-  <input type="text" name="productBrand" placeholder="4719.00"><br />
+  <input type="text" name="price" placeholder="4719.00"><br />
   <button class="newProdBtn" type="submit">Create new product</button>
 </form>
 

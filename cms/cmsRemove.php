@@ -6,7 +6,7 @@
 ?>
 <!-- input where you enter an ID to look for a product and delete it -->
 <h2>Enter product ID to remove:</h2>
-<form>
+<form action="cmsRemoveFunction.php" method="post">
   <input class="searchID" type="text" name="productID" placeholder="eg:5a6fdf96f310f870fda53530">
   <input class="searchIDBtn"type="submit" value="Search">
 </form>

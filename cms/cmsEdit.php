@@ -5,10 +5,10 @@
     outputMain();
 ?>
 <!-- input where you enter an ID to look for a product and edit it -->
-<h2>Enter product ID to edit:</h2>
-<form>
-  <input class="searchID" type="text" name="productID" placeholder="eg:5a6fdf96f310f870fda53530">
-  <input class="searchIDBtn"type="submit" value="Search">
+<h2>Enter a tag to find a product:</h2>
+<form action="find_products.php" method="get">
+  <input class="search" type="text" name="productTag" placeholder="eg:Curved; 4K; UHD">
+  <input class="searchBtn" type="submit" value="Search">
 </form>
 
 <?php

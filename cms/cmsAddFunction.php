@@ -20,9 +20,9 @@ $dataArray = [
 $returnVal = $collection->insert($dataArray);
 
 if($returnVal['ok']==1){
-    echo 'ok';
+    echo '' . $brand . ' ' . $model . ' added to the database';
 }else {
-    echo 'Error adding products';
+    echo 'Error adding product';
 }
 
 $mongoClient->close();

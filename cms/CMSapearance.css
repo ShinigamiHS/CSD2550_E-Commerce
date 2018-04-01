@@ -109,3 +109,12 @@ table td {
   font-size: 25px;
     border: 1px solid black;
 }
+#OKStatus {
+    font-family: 'Inconsolata', sans-serif;
+    font-size: 70px;
+    color: black;
+    margin-right: 450px;
+    margin-top: 500px;
+    display: block;
+    float: right;
+}

@@ -16,6 +16,7 @@ function searchFnc(){
         if(request.status === 200){
                 var responseData = request.responseText;
                 displayProducts(responseData);
+                console.log(responseData);
             }
             else
                 alert("Error communicating with server: " + request.status);

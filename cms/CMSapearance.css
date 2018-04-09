@@ -94,10 +94,10 @@ h1 {
   margin-left: 100px;
 }
 table {
-  margin-top: 50px;
-  margin-left: 3%;
-  width: 80%;
-  border: 1px solid black;
+    text-align: center;
+    margin-left: 3%;
+    width: 100%;
+    border: 1px solid black;
 }
 table th {
   padding: 8px;

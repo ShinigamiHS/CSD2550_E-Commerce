@@ -1,7 +1,8 @@
 <?php
 $mongoClient = new MongoClient();
 $db = $mongoClient->ecommerce;
-$products = $db->products->find();
+$search = filter_input(INPUT_POST, 'model', FILTER_SANITIZE_STRING);
+$products = $db->products->find(array('model'=> $search));
 
 $arr = array();
 foreach($products as $k) {
@@ -10,6 +11,5 @@ foreach($products as $k) {
 }
 
 echo json_encode($arr);
-
 $mongoClient->close();
  ?>

@@ -41,11 +41,6 @@ function OKStatus(){
             var newPrice = document.getElementById("price").value;
 
             request.send("brand=" + newBrand + "&model=" + newModel + "&screenSize=" + newSize + "&tags=" + newTags + "&price=" + newPrice);
-
-            document.getElementById("model").value = "";
-            document.getElementById("screenSize").value = "";
-            document.getElementById("tags").value = "";
-            document.getElementById("price").value = "";
         }
 </script>
 <?php

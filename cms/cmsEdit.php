@@ -6,7 +6,7 @@
 ?>
 <!-- input where you enter an ID to look for a product and edit it -->
 <h2>Enter the product model to find and edit/remove it:</h2>
-<input id="search"class="search" type="text" name="productModel" placeholder="eg:LC49HG90DMUXEN">
+<input id="search" class="search" type="text" name="productModel" placeholder="eg:LC49HG90DMUXEN">
 <button class="searchBtn" onclick="searchFnc()">Search</button>
 <div id="searchList"></div>
 <script>
@@ -30,7 +30,7 @@ function searchFnc(){
         }
         function displayProducts(jsonProducts){
             var prodArray = JSON.parse(jsonProducts);
-            var htmlStr ="<table><tr><th>Brand</th><th>Model</th><th>Scr. Size</th><th>Tags</th><th>Price</th></tr>";
+            var htmlStr ="<table><tr><th>Brand</th><th>Model</th><th>Scr. Size</th><th>Tags</th><th>Price</th><th>Edit</th><th>Remove</th></tr>";
             for(var i=0; i<prodArray.length; ++i) {
                 htmlStr += "<tr>";
                 htmlStr += "<td>" + prodArray[i].brand + "</td>";
@@ -38,6 +38,8 @@ function searchFnc(){
                 htmlStr += "<td>" + prodArray[i].size + "\'\'" + "</td>";
                 htmlStr += "<td>" + prodArray[i].tags + "</td>";
                 htmlStr += "<td>" + prodArray[i].price + "</td>";
+                htmlStr += "<td><button class='editBtn'>&#128366</button></td>";
+                htmlStr += "<td><button class='removeBtn'>&#10006</button></td>";
                 htmlStr += "</tr>";
             }
             htmlStr += "</table>";

@@ -21,10 +21,33 @@
     <input class="inputBox" id="regPass" type="password" name="regPass" required><br />
     <p3>Address</p3><br />
     <input class="inputBox" id="regAdd" type="text" name="regAdd" required><br />
-    <button onclick="checkLogin()">Register</button><br />
+    <button onclick="Register()">Register</button><br />
     <p4>Already have an account? Login <a href="login.php"> here</a></p4>
   </div>
 </div>
+<script>
+function Register(){
+    var request = new XMLHttpRequest();
+    request.onload = function(){
+        if(request.status === 200){
+                var responseData = request.responseText;
+                alert(responseData);
+            }
+            else
+                alert("Error communicating with server: " + request.status);
+            };
+            request.open("POST", "cmsAddFunction.php");
+            request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+            var newBrand = document.getElementById("brand").value;
+            var newModel = document.getElementById("model").value;
+            var newSize = document.getElementById("screenSize").value;
+            var newTags = document.getElementById("tags").value;
+            var newPrice = document.getElementById("price").value;
+
+            request.send("brand=" + newBrand + "&model=" + newModel + "&screenSize=" + newSize + "&tags=" + newTags + "&price=" + newPrice);
+        }
+</script>
 
 <?php
   //this function outputs the 2 closing tags in the HTML language

@@ -22,7 +22,7 @@ if($fullName == "" || $email == "" || $password == "" || $address == "" ){
 }
 
 if($returnVal['ok']==1){
-    echo 'Thank you ' . $fullName . " for Registering";
+    echo 'Thank you ' . $fullName . " for registering";
 }else {
     echo 'Error creating account';
 }

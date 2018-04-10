@@ -9,9 +9,10 @@ body {
   height: 50px;
 }
 .searchBtn {
-  font-size: 40px;
-  width: 160px;
-  height: 58px;
+    padding-top: -7px;
+    font-size: 35px;
+    width: 160px;
+    height: 52px;
 }
 h1 {
   margin-bottom: 70px;
@@ -22,7 +23,7 @@ h2 {
   font-size: 40px;
 }
 h3 {
-  font-size: 40px;
+  font-size: 70px;
   margin-left: 10%;
 }
 .orderH3 {
@@ -55,9 +56,6 @@ p {
 span {
   display: inline-block;
 }
-div {
-  display: inline-block;
-}
 li {
   float: left;
 }
@@ -83,7 +81,6 @@ h1 {
 }
 .cmsAddForm input{
   margin-left: 25px;
-  margin-bottom: 33px;
   font-size: 33px;
   width: 400px;
   height: 50px;
@@ -95,12 +92,14 @@ h1 {
   margin-left: 100px;
 }
 table {
+    margin-top: 1%;
+    margin-left: 1%;
     text-align: center;
-    margin-left: 3%;
-    width: 100%;
+    width: 98%;
     border: 1px solid black;
 }
 table th {
+    text-align: center;
   padding: 8px;
   font-size: 35px;
   border: 1px solid black;

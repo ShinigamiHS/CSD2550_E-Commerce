@@ -39,7 +39,6 @@
     }
 </script>
 <!-- Displays the product list with all of their details -->
-<h3>Stock list</h3>
 <div id="stockList"></div>
 <?php
   //PHP outputting the end HTML tags

@@ -9,10 +9,11 @@ $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
 $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
 
 $dataArray = [
-    "full Name" => $fullName,
+    "full name" => $fullName,
     "email" => $email,
     "password" => $password,
     "address" => $address,
+    "past orders" => []
 ];
 if($fullName == "" || $email == "" || $password == "" || $address == "" ){
     echo 'Some fields might be missing and/or wrong.';

@@ -13,8 +13,8 @@
           <img src="images\UserLogo2.png">
         </button>
         <div class="dropdown-content">
-            <a href="login.php">Log In</a>
-            <a href="register.php">Register</a>
+            <a id="dropBtn1" href="login.php">Log In</a>
+            <a id="dropBtn2" href="register.php">Register</a>
         </div>
     </div>
 </li>
@@ -39,7 +39,9 @@
       <a href="prodList.php" class="samsShopbutton"><span>Shop now </span></a>
     </span>
 </div>
-
+<script>
+    
+</script>
 <?php
   //this function outputs the 2 closing tags in HTML
 outputEndHTML();

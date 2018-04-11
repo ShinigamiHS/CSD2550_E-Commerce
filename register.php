@@ -36,7 +36,7 @@ function Register(){
             else
                 alert("Error communicating with server: " + request.status);
             };
-            request.open("POST", "cmsAddFunction.php");
+            request.open("POST", "addUser.php");
             request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
             var newBrand = document.getElementById("brand").value;

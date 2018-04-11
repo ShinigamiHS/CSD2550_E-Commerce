@@ -33,13 +33,39 @@
    <?php
      ItemFilters();
     ?>
-   <span class="mainItemDiv">
-     <?php
-       itemDivs();
-     ?>
-   </span>
+   <span id="mainItemDiv" class="mainItemDiv"></span>
  </div>
+ <script>
+     window.onload = loadProducts;
 
+     function loadProducts(){
+         var request = new XMLHttpRequest();
+
+         request.onload = function(){
+             if(request.status === 200){
+                 displayProducts(request.responseText);
+             }
+             else
+                 alert("Error communicating with server: " + request.status);
+
+         };
+         request.open("GET", "prodListFunction.php");
+         request.send();
+     }
+     function displayProducts(jsonProducts){
+         //document.getElementById("stockList").innerHTML = jsonProducts;
+         var prodArray = JSON.parse(jsonProducts);
+         var htmlStr = "";
+         for(var i=0; i<prodArray.length; ++i) {
+             htmlStr += "<span class='mainItemDiv2'><div>";
+             htmlStr += "<img src='images/x.png' /></div>";
+             htmlStr += "<div class='itemInfo1'><p5>" + prodArray[i].brand + " " + prodArray[i].model + "</p5><br /></div>";
+             htmlStr += "<div class='itemInfo2'><p5>" + prodArray[i].size + "\" Screen</p5><br /></div>";
+             htmlStr += "<div><p6>£" + prodArray[i].price + "</p6><button>Add to cart</button></div></span>";
+         }
+         document.getElementById("mainItemDiv").innerHTML = htmlStr;
+     }
+ </script>
  <?php
    //this function outputs the 2 closing tags in the HTML language
      outputEndHTML();

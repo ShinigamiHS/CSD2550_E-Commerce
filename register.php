@@ -39,13 +39,12 @@ function Register(){
             request.open("POST", "addUser.php");
             request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-            var newBrand = document.getElementById("brand").value;
-            var newModel = document.getElementById("model").value;
-            var newSize = document.getElementById("screenSize").value;
-            var newTags = document.getElementById("tags").value;
-            var newPrice = document.getElementById("price").value;
+            var newName = document.getElementById("regName").value;
+            var newEmail = document.getElementById("regMail").value;
+            var newPass = document.getElementById("regPass").value;
+            var newAddress = document.getElementById("regAdd").value;
 
-            request.send("brand=" + newBrand + "&model=" + newModel + "&screenSize=" + newSize + "&tags=" + newTags + "&price=" + newPrice);
+            request.send("fullName=" + newName + "&email=" + newEmail + "&password=" + newPass + "&address=" + newAddress);
         }
 </script>
 

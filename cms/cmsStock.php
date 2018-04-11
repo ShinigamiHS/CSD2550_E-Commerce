@@ -37,6 +37,9 @@
         htmlStr += "</table>";
         document.getElementById("stockList").innerHTML = htmlStr;
     }
+    setInterval(function(){
+        loadProducts()
+    }, 500);
 </script>
 <!-- Displays the product list with all of their details -->
 <div id="stockList"></div>

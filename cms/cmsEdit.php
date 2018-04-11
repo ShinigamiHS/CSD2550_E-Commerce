@@ -29,9 +29,9 @@ function deleteFnc(){
     var request = new XMLHttpRequest();
     request.onload = function(){
         if(request.status === 200){
-                var responseData = request.responseText;
-                console.log(responseData);
-                alert(responseData);
+            var responseData = request.responseText;
+            console.log(responseData);
+            alert(responseData);
             }
             else
                 alert("Error communicating with server: " + request.status);

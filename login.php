@@ -17,7 +17,6 @@
     <input class="inputBox" id="loginEmail" type="text" name="loginEmail" required><br />
     <p3>Password</p3><br />
     <input class="inputBox" id="loginPwd" type="password" name="loginPwd" required><br />
-    <input type="checkbox" name="loginCheck" value="yes" id="loginCheck"/>
     <button onclick="checkLogin()">Login</button><br />
     <p4>Don't have an account yet? Register <a href="register.php">here</a></p4>
   </div>
@@ -29,6 +28,7 @@ function checkLogin(){
         if(request.status === 200){
                 var responseData = request.responseText;
                 alert(responseData);
+                window.location.replace("index.php");
             }
             else
                 alert("Error communicating with server: " + request.status);
@@ -38,7 +38,6 @@ function checkLogin(){
 
             var loginEmail = document.getElementById("loginEmail").value;
             var loginPwd = document.getElementById("loginPwd").value;
-            var loginCheck = document.getElementById("loginCheck").value;
 
             request.send("loginEmail=" + loginEmail + "&loginPwd=" + loginPwd);
         }

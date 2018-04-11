@@ -13,8 +13,8 @@
           <img src="images\UserLogo2.png">
         </button>
         <div class="dropdown-content">
-            <a href="login.php">Log In</a>
-            <a href="register.php">Register</a>
+            <a id="dropBtn1" href="login.php">Log In</a>
+            <a id="dropBtn2" href="register.php">Register</a>
         </div>
     </div>
 </li>
@@ -47,12 +47,28 @@
              }
              else
                  alert("Error communicating with server: " + request.status);
-
-         };
+             };
          request.open("GET", "prodListFunction.php");
          request.send();
      }
+     function searchProducts() {
+         var request = new XMLHttpRequest();
+
+         request.onload = function() {
+             if(request.status === 200) {
+                 displayProducts(request.responseText);
+                 alert(request.responseText);
+             } else{
+                 alert("Error communicating with server: " + request.status);
+             }
+         }
+         request.open("POST", "prodListFunction.php");
+         request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+         var searchTerm = document.getElementById("searchBar").value;
+         request.send("search=" + searchTerm);
+     }
      function displayProducts(jsonProducts){
+         console.log(jsonProducts);
          //document.getElementById("stockList").innerHTML = jsonProducts;
          var prodArray = JSON.parse(jsonProducts);
          var htmlStr = "";

@@ -77,9 +77,26 @@
              htmlStr += "<img src='images/x.png' /></div>";
              htmlStr += "<div class='itemInfo1'><p5>" + prodArray[i].brand + " " + prodArray[i].model + "</p5><br /></div>";
              htmlStr += "<div class='itemInfo2'><p5>" + prodArray[i].size + "\" Screen</p5><br /></div>";
-             htmlStr += "<div><p6>£" + prodArray[i].price + "</p6><button>Add to cart</button></div></span>";
+             htmlStr += "<div><p6>£" + prodArray[i].price + "</p6><button onclick = 'addToCart()'>Add to cart</button></div></span>";
          }
          document.getElementById("mainItemDiv").innerHTML = htmlStr;
+     }
+     function addToCart(){  
+         
+         var request = new XMLHttpRequest();
+
+         request.onload = function(){
+             if(request.status === 200){
+                 displayProducts(request.responseText);
+            alert("working");
+             }
+             else
+                 alert("Error communicating with server: " + request.status);
+
+         };
+         request.open("GET", "prodListFunction.php");
+         request.send();
+         
      }
  </script>
  <?php

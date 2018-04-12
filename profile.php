@@ -23,7 +23,6 @@
   </a>
 </li>
 </ul>
-<p4> Profile</p4>
 <script>
     window.onload = checkLogin;
     var request = new XMLHttpRequest();
@@ -41,7 +40,6 @@
 
             }
         };
-        
         //Set up and send request
         request.open("GET", "checkLogin.php");
         request.send();

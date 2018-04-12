@@ -41,12 +41,10 @@ function outputNavBar() {
 }
 function outputSearchBar() {
   //creates the search bar on the top of most of the shop pages
-  echo '<form>';
-  echo '<input class="searchBar" type="text" name="searchBar" placeholder="Search for product"/>';
-  echo '<input class="searchBarSub" type="Submit" value="Search" src="images\glass.png"/>';
-  echo '</form>';
-}
 
+  echo '<input id="searchBar" class="searchBar" type="text" name="searchBar" placeholder="Search for products"/>';
+  echo '<button class="searchBarSub" id="searchBarSub" onclick="searchProducts()"> Search</button>';
+}
 function itemDivs() {
   //loops throught the number of products (8 is used in this case just to simplify the creation of multiple boxes) and generate a box containing a picture and info about the products
   for ($i = 0; $i < 8; $i++) {

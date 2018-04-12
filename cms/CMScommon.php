@@ -19,7 +19,7 @@ function outputMain() {
     echo '<ul class="NavBar">';
 
     $CMSpages = array("Home", "View all stock", "Add items",  "Edit products", "Review orders");
-    $CMSpageRef = array("cmsHome.php", "cmsStock.php", "cmsAdd.php", "cmsEdit.php", "cmsOrders.php");
+    $CMSpageRef = array("index.php", "cmsStock.php", "cmsAdd.php", "cmsEdit.php", "cmsOrders.php");
     for ($i = 0; $i < count($CMSpages); $i++) {
       echo '<li><a href="' . $CMSpageRef[$i] . '">' . $CMSpages[$i] . '';
       echo '</a></li>';

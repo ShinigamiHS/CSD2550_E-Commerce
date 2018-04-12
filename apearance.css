@@ -587,6 +587,11 @@ p1{
 p2 {
   font-family: 'Exo 2', sans-serif;
 }
+
+p4 {
+    font-size: 32px;
+    font-family: 'Exo 2', sans-serif
+}
 @keyframes movefadeProd1 {
   from { margin-top: 175px; opacity: 0; }
   to   { margin-top: 25px; opacity: 1; }

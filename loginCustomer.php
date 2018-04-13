@@ -32,7 +32,7 @@
         $_SESSION['loggedInUserName'] = $customer['full name'];
 
         //Inform web page that login is successful
-        echo '' . $customer["full name"] . ' logged in. Welcome!';
+        echo '' . $_SESSION['loggedInUserName'] . ' logged in. Welcome!';
     }
 
     //Close the connection

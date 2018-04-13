@@ -23,12 +23,12 @@
   </a>
 </li>
 </ul>
-
 <form action="/action_page.php">
    <input type="file" name="pic" accept="image/*">
   <br>
     <input type="submit">
 </form>
+
 <script>
     window.onload = checkLogin;
     var request = new XMLHttpRequest();

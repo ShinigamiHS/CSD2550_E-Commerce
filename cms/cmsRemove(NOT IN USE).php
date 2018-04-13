@@ -10,7 +10,7 @@
   <input class="searchID" type="text" name="productID" placeholder="eg:5a6fdf96f310f870fda53530">
   <input class="searchIDBtn"type="submit" value="Search">
 </form>
-
+<
 <?php
   //PHP outputting the end HTML tags
     outputEndCMS();

@@ -12,11 +12,13 @@ $price = filter_input(INPUT_POST, 'price', FILTER_SANITIZE_NUMBER_FLOAT,
 FILTER_FLAG_ALLOW_FRACTION);
 $stock = filter_input(INPUT_POST, 'stock', FILTER_SANITIZE_NUMBER_FLOAT);
 
+$splitTags = explode(" ", $tags);
+
 $dataArray = [
     "brand" => $brand,
     "model" => $model,
     "size" => $screen,
-    "tags" => $tags,
+    "tags" => $splitTags,
     "price" => $price,
     "stock" => $stock
 ];

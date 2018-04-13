@@ -102,7 +102,8 @@
             }
             else 
                 alert("ERROR Communicating with server")}
-        request.open("GET", )
+        request.open("GET", "addToCartFunction.php");
+        request.send($_SESSION['loggedInUserEmail']);
     }
 </script>
 <?php

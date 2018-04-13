@@ -1,10 +1,9 @@
 <?php
   /*outputNavBar and outputHeader is used on all the main shop pages to make sure not alot of HTML code is re-used
     */
-    include('common.php');
-
-    outputHeader("MoniShop");
-    outputNavBar();
+include('common.php');    
+outputHeader("MoniShop");    
+outputNavBar();
 ?>
 <!-- This section of the list is separate from the rest of the php function because it has unique properties such as the dropdown menu on the account tab and a smaller "box" on the cart -->
 <li>
@@ -19,9 +18,9 @@
     </div>
 </li>
 <li>
-  <a class="shoppingCart" href="cart.php">
-    <img src="images\shoppingCart.png"/>
-  </a>
+    <a class="shoppingCart" href="cart.php">
+        <img src="images\shoppingCart.png"/>
+    </a>
 </li>
 </ul>
   <!-- This section displays the 2 main products sold, a HP Omen monitor and a Samsung TV along with buttons (in the form of <a></a>) that direct the customer to the brand page -->
@@ -30,9 +29,9 @@
         <img src="images\SamsungProd3.png" />
     </span>
     <span class="mainProdInfo_2">
-      <h3><b>QLED Ultra HD Premium HDR</b></h3>
-      <h4><b>88'' Display</b></h4>
-      <a href="prodList.php" class="samsShopbutton"><span>Shop now </span></a>
+        <h3><b>QLED Ultra HD Premium HDR</b></h3>
+        <h4><b>88'' Display</b></h4>
+        <a href="prodList.php" class="samsShopbutton"><span>Shop now </span></a>
     </span>
 </div>
 <script>
@@ -49,7 +48,6 @@
             }
             else{
                 console.log(request.responseText);
-
             }
         };
         //Set up and send request

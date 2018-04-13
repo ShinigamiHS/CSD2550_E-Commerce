@@ -30,9 +30,36 @@
  ?>
  <!-- The filters section and the (at the moment 8) boxes for the products are generated using php -->
  <div class="AsusBrandDiv">
-   <?php
-     ItemFilters();
-    ?>
+     <span class="mainItemFilters">
+       <div class="CategoryFilter">
+         <h5>Category</h5>
+         <div>
+           <input type="checkbox" />
+           <label>Curved</label>
+         </div>
+         <div>
+           <input type="checkbox" />
+           <label>4K</label>
+         </div>
+         <div>
+           <input type="checkbox" />
+           <label>Smart</label>
+         </div>
+       </div>
+       <div class="SizeFilter">
+         <h5>Screen Size</h5>
+         <select>
+           <option value="any" selected>---</option>
+           <option value="25-35">25"-35"</option>
+           <option value="35-45">35"-45"</option>
+           <option value="45-55">45"-55"</option>
+           <option value="+55">+55"</option>
+         </select>
+       </div>
+       <div>
+
+       </div>
+     </span>
    <span id="mainItemDiv" class="mainItemDiv"></span>
  </div>
  <script>
@@ -63,6 +90,7 @@
      }
 
      function logout() {
+         var request = new XMLHttpRequest;
          request.onload = function() {
              if(request.status === 200) {
                  alert(request.responseText);

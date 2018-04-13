@@ -30,9 +30,13 @@
 </form>
 
 <script>
-    window.onload = checkLogin;
-    var request = new XMLHttpRequest();
+window.onload = start();
+function start() {
+    checkLogin();
+    viewPastOrders();
+}
     function checkLogin(){
+        var request = new XMLHttpRequest;
         request.onload = function(){
             if(request.responseText === "ok"){
                 document.getElementById("dropBtn1").innerHTML = "Profile";
@@ -99,12 +103,13 @@
         var request = new XMLHttpRequest();
         request.onload = function(){
             if(request.status === 200){
-                var responseData = request.responseText 
+                var responseData = request.responseText
                 alert(responseData);
             }
-            else 
+            else
                 alert("ERROR Communicating with server")}
-        request.open("GET", )
+        request.open("POST", "addToCartFunction.php");
+        request.send("email=" + $_SESSION['loggedInUserEmail']);
     }
 </script>
 <?php

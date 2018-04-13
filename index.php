@@ -30,7 +30,7 @@
         <img src="images\SamsungProd3.png" />
     </span>
     <span class="mainProdInfo_2">
-      <h3><b>QLED Ultra HD Premium HDR</b></h3>
+      <h3><b>QLED Ultra HD Premium</b></h3>
       <h4><b>88'' Display</b></h4>
       <a href="prodList.php" class="samsShopbutton"><span>Shop now </span></a>
     </span>

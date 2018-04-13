@@ -65,55 +65,6 @@ function itemDivs() {
   }
 }
 
-function ItemFilters() {
-  //function used to generate the filters section on all of the pages, at the moment there is no difference between athe filters used in different pages because there are still no products to choose from
-  echo '<span class="mainItemFilters">
-    <div class="CategoryFilter">
-      <h5>Category</h5>
-      <div>
-        <input type="checkbox" />
-        <label>Curved</label>
-      </div>
-      <div>
-        <input type="checkbox" />
-        <label>4K</label>
-      </div>
-      <div>
-        <input type="checkbox" />
-        <label>Smart</label>
-      </div>
-    </div>
-    <div class="SizeFilter">
-      <h5>Screen Size</h5>
-      <select>
-        <option value="any" selected>---</option>
-        <option value="25-35">25"-35"</option>
-        <option value="35-45">35"-45"</option>
-        <option value="45-55">45"-55"</option>
-        <option value="+55">+55"</option>
-      </select>
-    </div>
-    <div class="CategoryFilter">
-      <h5>Screen Resolution</h5>
-      <div>
-        <input type="checkbox" />
-        <label>3440 x 1440</label>
-      </div>
-      <div>
-        <input type="checkbox" />
-        <label>2560 x 1440</label>
-      </div>
-      <div>
-        <input type="checkbox" />
-        <label>1920 x 1080</label>
-      </div>
-      <div>
-        <input type="checkbox" />
-        <label>1600 x 900</label>
-      </div>
-    </div>
-  </span>';
-}
 
 function outputEndHTML() {
     echo '</body>';

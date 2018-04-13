@@ -35,14 +35,9 @@
   </div>
 </div>
 <script>
-    function checkCart(){
-        if{
-            
-        }
-    }
-    window.onload = checkLogin;
-    var request = new XMLHttpRequest();
+    window.onload = checkLogin();
     function checkLogin(){
+        var request = new XMLHttpRequest();
         request.onload = function(){
             if(request.responseText === "ok"){
                 document.getElementById("dropBtn1").innerHTML = "Profile";
@@ -61,6 +56,7 @@
         request.send();
     }
     function logout() {
+        var request = new XMLHttpRequest();
         request.onload = function() {
             if(request.status === 200) {
                 alert(request.responseText);
@@ -71,12 +67,6 @@
         }
         request.open("GET", "logoutFunction.php");
         request.send();
-    }
-    function loadItems() {
-        request.onload = function() {
-            if(isset($_SESSION['loggedInUser']))
-        }
-
     }
 </script>
 <?php

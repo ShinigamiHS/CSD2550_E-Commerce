@@ -47,7 +47,7 @@ var request = new XMLHttpRequest();
     function displayProducts(jsonProducts){
         //document.getElementById("stockList").innerHTML = jsonProducts;
         var prodArray = JSON.parse(jsonProducts);
-        var htmlStr ="<table><tr><th>Brand</th><th>Model</th><th>Scr. Size</th><th>Tags</th><th>Price</th></tr>";
+        var htmlStr ="<table><tr><th>Brand</th><th>Model</th><th>Scr. Size</th><th>Tags</th><th>Price</th><th>Stock Count</th>";
         for(var i=0; i<prodArray.length; ++i) {
             htmlStr += "<tr>";
             htmlStr += "<td>" + prodArray[i].brand + "</td>";
@@ -55,14 +55,12 @@ var request = new XMLHttpRequest();
             htmlStr += "<td>" + prodArray[i].size + "\'\'" + "</td>";
             htmlStr += "<td>" + prodArray[i].tags + "</td>";
             htmlStr += "<td>" + prodArray[i].price + "</td>";
+            htmlStr += "<td>" + prodArray[i].stock + "</td>";
             htmlStr += "</tr>";
         }
         htmlStr += "</table>";
         document.getElementById("stockList").innerHTML = htmlStr;
     }
-    setInterval(function(){
-        loadProducts()
-    }, 500);
 </script>
 <!-- Displays the product list with all of their details -->
 <div id="stockList"></div>

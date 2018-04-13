@@ -57,7 +57,6 @@
          request.onload = function() {
              if(request.status === 200) {
                  displayProducts(request.responseText);
-                 alert(request.responseText);
              } else{
                  alert("Error communicating with server: " + request.status);
              }

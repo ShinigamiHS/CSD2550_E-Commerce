@@ -36,8 +36,44 @@
    <span id="mainItemDiv" class="mainItemDiv"></span>
  </div>
  <script>
-     window.onload = loadProducts;
+     window.onload = start();
 
+     function start() {
+         loadProducts();
+         checkLogin();
+     }
+     function checkLogin(){
+         var request = new XMLHttpRequest();
+         request.onload = function(){
+             if(request.responseText === "ok"){
+                 document.getElementById("dropBtn1").innerHTML = "Profile";
+                 document.getElementById("dropBtn1").setAttribute("href", "profile.php");
+                 document.getElementById("dropBtn2").innerHTML  = "Logout";
+                 document.getElementById("dropBtn2").removeAttribute("href");
+                 document.getElementById("dropBtn2").setAttribute("onclick", "logout()");
+             }
+             else{
+                 console.log(request.responseText);
+
+             }
+         };
+         //Set up and send request
+         request.open("GET", "checkLogin.php");
+         request.send();
+     }
+
+     function logout() {
+         request.onload = function() {
+             if(request.status === 200) {
+                 alert(request.responseText);
+                 window.location.replace("index.php");
+             }else {
+                 alert("Error logging out");
+             }
+         }
+         request.open("GET", "logoutFunction.php");
+         request.send();
+     }
      function loadProducts(){
          var request = new XMLHttpRequest();
 

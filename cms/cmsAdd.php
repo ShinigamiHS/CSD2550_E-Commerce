@@ -6,6 +6,7 @@
 ?>
 <!-- input boxes where you can create a new product -->
 <div class="cmsAddForm">
+<<<<<<< HEAD
   
     Brand:<br />
     <input type="text" id="brand" placeholder="Samsung"><br />
@@ -20,16 +21,57 @@
     Stock count:<br />
     <input type="text" id="stock" placeholder="10"><br />  
     <button class="newProdBtn" onclick="OKStatus()">Create new product</button>
+=======
+  Brand:<br />
+  <input type="text" id="brand" placeholder="Samsung"><br />
+  Model:<br />
+  <input type="text" id="model" placeholder="ONE WORD ONLY PLEASE"><br />
+  Screen size:<br />
+  <input type="text" id="screenSize" placeholder="75"><br />
+  Description:<br />
+  <input type="text" id="tags" placeholder="Curved QLED Ultra HD Premium HDR Smart 4K"><br />
+  Price:<br />
+  <input type="text" id="price" placeholder="4719.00"><br />
+  Stock count:<br />
+  <input type="text" id="stock" placeholder="10"><br />
+  <button class="newProdBtn" onclick="OKStatus()">Create new product</button>
+>>>>>>> 25e23be644f2269264a88c4a4a332371626ec019
 </div>
 <div id="OKStatus"></div>
 
 
 <script>
+<<<<<<< HEAD
 
     function OKStatus(){
         var request = new XMLHttpRequest();
         request.onload = function(){
             if(request.status === 200){
+=======
+window.onload = checkLogin;
+var request = new XMLHttpRequest();
+function checkLogin(){
+    request.onload = function(){
+        if(request.responseText === "ok"){
+            console.log(request.responseText);
+            return;
+        }
+        else{
+            alert("YOU NEED TO LOGIN TO ACCESS THIS PAGE");
+            window.location.replace("index.php");
+            console.log(request.responseText);
+
+        }
+    };
+    //Set up and send request
+    request.open("GET", "checkLoginStaff.php");
+    request.send();
+}
+function OKStatus(){
+    var request = new XMLHttpRequest();
+    request.onload = function(){
+        if(request.status === 200){
+>>>>>>> 25e23be644f2269264a88c4a4a332371626ec019
                 var responseData = request.responseText;
                 alert(responseData);
             }

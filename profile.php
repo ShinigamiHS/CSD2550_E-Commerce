@@ -23,6 +23,12 @@
   </a>
 </li>
 </ul>
+
+<form action="/action_page.php">
+   <input type="file" name="pic" accept="image/*">
+  <br>
+    <input type="submit">
+</form>
 <script>
     window.onload = checkLogin;
     var request = new XMLHttpRequest();
@@ -56,6 +62,39 @@
         request.open("GET", "logoutFunction.php");
         request.send();
     }
+    window.onload = loadProducts;
+
+    function loadProfile(){
+        var request = new XMLHttpRequest();
+
+        request.onload = function(){
+            if(request.status === 200){
+                displayProducts(request.responseText);
+            }
+            else
+                alert("Error communicating with server: " + request.status);
+
+        };
+        request.open("GET", "find_products.php");
+        request.send();
+    }
+    function displayProducts(jsonUsers){
+        //document.getElementById("stockList").innerHTML = jsonProducts;
+        var prodArray = JSON.parse(jsonUsers);
+        var htmlStr ="<table><tr><th>Brand</th><th>Model</th><th>Scr. Size</th><th>Tags</th><th>Price</th></tr>";
+        for(var i=0; i<prodArray.length; ++i) {
+            htmlStr += "<tr>";
+            htmlStr += "<td>" + prodArray[i].fullName + "</td>";
+            htmlStr += "<td>" + prodArray[i].email + "</td>";
+            htmlStr += "<td>" + prodArray[i].address + "\'\'" + "</td>";
+            htmlStr += "</tr>";
+        }
+        htmlStr += "</table>";
+        document.getElementById("stockList").innerHTML = htmlStr;
+    }
+    setInterval(function(){
+        loadProducts()
+    }, 500);
 </script>
 <?php
   //this function outputs the 2 closing tags in HTML

@@ -5,7 +5,6 @@
 
     $email = filter_input(INPUT_POST, 'loginEmail', FILTER_SANITIZE_STRING);
     $password = filter_input(INPUT_POST, 'loginPwd', FILTER_SANITIZE_STRING);
-    $loginCheck = filter_input(INPUT_POST, 'loginCheck');
     $cursor = $db->customers->find(array("email" => $email));
 
     //Check that there is exactly one customer

@@ -40,6 +40,7 @@
                 document.getElementById("dropBtn2").innerHTML  = "Logout";
                 document.getElementById("dropBtn2").removeAttribute("href");
                 document.getElementById("dropBtn2").setAttribute("onclick", "logout()");
+                loadProfile($_SESSION['loggedInUserEmail']);
             }
             else{
                 console.log(request.responseText);
@@ -78,7 +79,9 @@
         request.open("GET", "find_products.php");
         request.send();
     }
+
     function displayProducts(jsonUsers){
+
         //document.getElementById("stockList").innerHTML = jsonProducts;
         var prodArray = JSON.parse(jsonUsers);
         var htmlStr ="<table><tr><th>Brand</th><th>Model</th><th>Scr. Size</th><th>Tags</th><th>Price</th></tr>";
@@ -92,7 +95,6 @@
         htmlStr += "</table>";
         document.getElementById("stockList").innerHTML = htmlStr;
     }
-    
     function viewPastOrders(){
         var request = new XMLHttpRequest();
         request.onload = function(){

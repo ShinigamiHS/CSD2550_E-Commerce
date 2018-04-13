@@ -25,6 +25,25 @@
     </div>
 </div>
 <script>
+window.onload = checkLogin;
+var request = new XMLHttpRequest();
+function checkLogin(){
+    request.onload = function(){
+        if(request.responseText === "ok"){
+            console.log(request.responseText);
+            return;
+        }
+        else{
+            alert("YOU NEED TO LOGIN TO ACCESS THIS PAGE");
+            window.location.replace("index.php");
+            console.log(request.responseText);
+
+        }
+    };
+    //Set up and send request
+    request.open("GET", "checkLoginStaff.php");
+    request.send();
+}
 function deleteFnc(){
     var request = new XMLHttpRequest();
     request.onload = function(){

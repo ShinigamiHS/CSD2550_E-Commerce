@@ -72,6 +72,12 @@
         request.open("GET", "logoutFunction.php");
         request.send();
     }
+    function loadItems() {
+        request.onload = function() {
+            if(isset($_SESSION['loggedInUser']))
+        }
+
+    }
 </script>
 <?php
   //this function outputs the 2 closing tags in the HTML language

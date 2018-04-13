@@ -16,6 +16,8 @@
   <input type="text" id="tags" placeholder="Curved QLED Ultra HD Premium HDR Smart 4K"><br />
   Price:<br />
   <input type="text" id="price" placeholder="4719.00"><br />
+  Stock count:<br />
+  <input type="text" id="stock" placeholder="10"><br />
   <button class="newProdBtn" onclick="OKStatus()">Create new product</button>
 </div>
 <div id="OKStatus"></div>
@@ -38,9 +40,11 @@ function OKStatus(){
             var newModel = document.getElementById("model").value;
             var newSize = document.getElementById("screenSize").value;
             var newTags = document.getElementById("tags").value;
+            var newTagsSplit = newTags.split(" ");
             var newPrice = document.getElementById("price").value;
+            var newStock = document.getElementById("stock").value;
 
-            request.send("brand=" + newBrand + "&model=" + newModel + "&screenSize=" + newSize + "&tags=" + newTags + "&price=" + newPrice);
+            request.send("brand=" + newBrand + "&model=" + newModel + "&screenSize=" + newSize + "&tags=" + newTags + "&price=" + newPrice + "&stock=" + newStock);
         }
 </script>
 <?php

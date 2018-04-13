@@ -313,17 +313,17 @@ span {
   width: 300px;
   height: 430px;
 }
-.mainItemDiv2 p6 {
+.mainItemDiv2 p5, p6 {
   font-size: 20px;
 }
-.mainItemDiv2 .itemInfo1{
+/*.mainItemDiv2 .itemInfo1{
   font-size: 20px;
   padding-top: 15px;
 }
 .mainItemDiv2 .itemInfo2{
   font-size: 20px;
   padding-top: 15px;
-}
+}*/
 .mainItemDiv2 button{
   width: 45%;
   font-size: 20px;
@@ -586,6 +586,11 @@ p1{
 }
 p2 {
   font-family: 'Exo 2', sans-serif;
+}
+
+p5 {
+    font-size: 32px;
+    font-family: 'Exo 2', sans-serif
 }
 @keyframes movefadeProd1 {
   from { margin-top: 175px; opacity: 0; }

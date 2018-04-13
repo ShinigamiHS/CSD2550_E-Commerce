@@ -10,15 +10,17 @@ FILTER_FLAG_ALLOW_FRACTION);
 $tags = filter_input(INPUT_POST, 'tags', FILTER_SANITIZE_STRING);
 $price = filter_input(INPUT_POST, 'price', FILTER_SANITIZE_NUMBER_FLOAT,
 FILTER_FLAG_ALLOW_FRACTION);
+$stock = filter_input(INPUT_POST, 'stock', FILTER_SANITIZE_NUMBER_FLOAT);
 
 $dataArray = [
     "brand" => $brand,
     "model" => $model,
     "size" => $screen,
     "tags" => $tags,
-    "price" => $price
+    "price" => $price,
+    "stock" => $stock
 ];
-if($brand == "" || $model == "" || $screen == "" || $tags == "" || $price == ""){
+if($brand == "" || $model == "" || $screen == "" || $tags == "" || $price == "" || $stock == ""){
     echo 'Some fields might be missing and/or wrong.';
     exit();
 } else {

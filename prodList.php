@@ -75,28 +75,28 @@
          for(var i=0; i<prodArray.length; ++i) {
              htmlStr += "<span class='mainItemDiv2'><div>";
              htmlStr += "<img src='images/x.png' /></div>";
-             htmlStr += "<div class='itemInfo1'><p5>" + prodArray[i].brand + " " + prodArray[i].model + "</p5><br /></div>";
-             htmlStr += "<div class='itemInfo2'><p5>" + prodArray[i].size + "\" Screen</p5><br /></div>";
-             htmlStr += "<div><p6>£" + prodArray[i].price + "</p6><button onclick = 'addToCart()'>Add to cart</button></div></span>";
+             htmlStr += "<div style='font-size:20px; padding-top:15px;' id='itemInfo" + i + "'><p5>" + prodArray[i].brand + " " + prodArray[i].model + "</p5><br /></div>";
+             htmlStr += "<div style='font-size:20px; padding-top:15px;' id='itemInfo" + i+1 + "'><p5>" + prodArray[i].size + "\" Screen</p5><br /></div>";
+             htmlStr += "<div><p6>£" + prodArray[i].price + "</p6><button onclick = 'addToCart(" + i + ")'>Add to cart</button></div></span>";
          }
          document.getElementById("mainItemDiv").innerHTML = htmlStr;
      }
-     function addToCart(){  
-         
+     function addToCart(i){
          var request = new XMLHttpRequest();
 
          request.onload = function(){
              if(request.status === 200){
-                 displayProducts(request.responseText);
-            alert("working");
+                 alert(request.responseText);
              }
              else
                  alert("Error communicating with server: " + request.status);
 
          };
-         request.open("GET", "prodListFunction.php");
-         request.send();
-         
+         request.open("POST", "addToCartFunction.php");
+         request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+         var newCartItem = document.getElementById("itemInfo" + i).innerHTML;
+         request.send("newCartItem=" + newCartItem);
+
      }
  </script>
  <?php

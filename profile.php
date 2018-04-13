@@ -23,6 +23,7 @@
   </a>
 </li>
 </ul>
+<p7>profile</p7>
 <script>
     window.onload = checkLogin;
     var request = new XMLHttpRequest();

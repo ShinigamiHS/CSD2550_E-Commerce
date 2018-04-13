@@ -35,6 +35,11 @@
   </div>
 </div>
 <script>
+    function checkCart(){
+        if{
+            
+        }
+    }
     window.onload = checkLogin;
     var request = new XMLHttpRequest();
     function checkLogin(){

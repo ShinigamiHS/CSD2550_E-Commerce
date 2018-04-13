@@ -23,7 +23,7 @@
   </a>
 </li>
 </ul>
-<form action="/action_page.php">
+<form action="/submit_pic.php">
    <input type="file" name="pic" accept="image/*">
   <br>
     <input type="submit">
@@ -59,8 +59,8 @@
                 alert("Error logging out");
             }
         }
-        request.open("GET", "logoutFunction.php");
-        request.send();
+        request.open("POST", "logoutFunction.php");
+    request.send("email="+$_SESSION['loggedInUserEmail']);
     }
     window.onload = loadProducts;
 
@@ -92,9 +92,18 @@
         htmlStr += "</table>";
         document.getElementById("stockList").innerHTML = htmlStr;
     }
-    setInterval(function(){
-        loadProducts()
-    }, 500);
+    
+    function viewPastOrders(){
+        var request = new XMLHttpRequest();
+        request.onload = function(){
+            if(request.status === 200){
+                var responseData = request.responseText 
+                alert(responseData);
+            }
+            else 
+                alert("ERROR Communicating with server")}
+        request.open("GET", )
+    }
 </script>
 <?php
   //this function outputs the 2 closing tags in HTML

@@ -14,8 +14,6 @@
         echo $splitItem[1];
         $customer = $collection->find(array("email" => $customerSession));
     }
-
-
     $mongoClient->close();
 ?>
 
